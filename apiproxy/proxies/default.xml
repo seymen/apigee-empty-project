@@ -14,7 +14,7 @@
         <AlwaysEnforce>true</AlwaysEnforce>
         <Step>
             <Condition>(flow.apigee.error.code = null)</Condition>
-            <Name>AssignMessage.Set500Error</Name>
+            <Name>AssignMessage.Set500ApigeeError</Name>
         </Step>
         <Step>
             <Name>RaiseFault.Json</Name>

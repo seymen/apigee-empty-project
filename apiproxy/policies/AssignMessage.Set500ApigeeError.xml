@@ -1,4 +1,4 @@
-<AssignMessage name="AssignMessage.Set500Error">
+<AssignMessage name="AssignMessage.Set500ApigeeError">
 
 	<AssignVariable>
 		<Name>flow.apigee.error.code</Name>
