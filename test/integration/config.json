@@ -1,6 +1,6 @@
 {
 	"test": {
 		"domain": "${api.northbound.domain}",
-		"basepath": "/empty/v1"
+		"basepath": "/empty/${deployment.suffix}v1"
 	}
 }
