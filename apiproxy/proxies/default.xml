@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ProxyEndpoint name="default">
 
+    <DefaultFaultRule name="DefaultHandler">
+        <AlwaysEnforce>true</AlwaysEnforce>
+        <Step>
+            <Condition>(flow.apigee.error.code = null)</Condition>
+            <Name>AssignMessage.Set500Error</Name>
+        </Step>
+        <Step>
+            <Name>RaiseFault.Json</Name>
+        </Step>
+    </DefaultFaultRule>
+
     <PreFlow name="PreFlow">
     </PreFlow>
 
