@@ -1,0 +1,28 @@
+<AssignMessage name="AssignMessage.SetSpikeArrestError">
+
+	<AssignVariable>
+		<Name>flow.apigee.error.code</Name>
+		<Value>429.01.001</Value>
+	</AssignVariable>
+
+	<AssignVariable>
+		<Name>flow.apigee.error.message</Name>
+		<Value>Too many requests</Value>
+	</AssignVariable>
+
+	<AssignVariable>
+		<Name>flow.apigee.error.info</Name>
+		<Value>https://developers.apigee.com/errors/429.01.001</Value>
+	</AssignVariable>
+
+	<AssignVariable>
+		<Name>flow.apigee.error.status</Name>
+		<Value>429</Value>
+	</AssignVariable>
+
+	<AssignVariable>
+		<Name>flow.apigee.error.reason</Name>
+		<Value>Too Many Requests</Value>
+	</AssignVariable>
+
+</AssignMessage>
