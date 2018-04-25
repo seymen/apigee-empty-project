@@ -10,6 +10,9 @@
     </PostFlow>
 
     <HTTPTargetConnection>
+        <Properties>
+            <Property name="success.codes">2XX,3XX,4XX</Property>
+        </Properties>
         <URL>https://httpbin.org</URL>
     </HTTPTargetConnection>
 
