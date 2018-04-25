@@ -4,7 +4,7 @@ Feature: Resource not found
 	So I can learn the API and fix my errors quickly
 
 	Scenario: I should get an error when I request a non-existing resource
-		When I GET /blah
+		When I GET /
 		Then response code should be 404
         And response header Content-Type should be application/json
         And response body path $.code should be 404.01.001
