@@ -1,0 +1,12 @@
+{
+	"name": "empty-v1",
+	"version": "1.0.0",
+	"devDependencies": {
+		"eslint": "^4",
+		"apickli": "^2",
+		"cucumber": "^3",
+		"prettyjson": "^1",
+		"mocha": "^2",
+		"eslint-config-google": "^0"
+	}
+}

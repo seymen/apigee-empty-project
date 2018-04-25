@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TargetEndpoint name="default">
+
+    <PreFlow name="PreFlow">
+    </PreFlow>
+
+    <Flows/>
+
+    <PostFlow name="PostFlow">
+    </PostFlow>
+
+    <HTTPTargetConnection>
+        <URL>https://httpbin.org</URL>
+    </HTTPTargetConnection>
+
+</TargetEndpoint>
