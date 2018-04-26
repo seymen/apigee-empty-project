@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <TargetEndpoint name="default">
 
+    <FaultRules>
+        <FaultRule name="TargetError">
+            <Condition>(fault.name = "ErrorResponseCode")</Condition>
+            <Step>
+                <Name>AssignMessage.Set500TargetError</Name>
+            </Step>
+        </FaultRule>
+    </FaultRules>
+
     <PreFlow name="PreFlow">
     </PreFlow>
 

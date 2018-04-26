@@ -8,7 +8,8 @@
 {
     "code": "{flow.apigee.error.code}",
     "message": "{flow.apigee.error.message}",
-    "info": "{flow.apigee.error.info}"
+    "info": "{flow.apigee.error.info}",
+    "fault": "{fault.name}"
 }
             </Payload>
             <StatusCode>{flow.apigee.error.status}</StatusCode>
