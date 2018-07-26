@@ -1,3 +1,0 @@
-<SpikeArrest name="SpikeArrest.Global">
-    <Rate ref="flow.config.spikearrest.ratelimit">1ps</Rate>
-</SpikeArrest>

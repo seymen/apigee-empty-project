@@ -2,12 +2,6 @@
 <ProxyEndpoint name="default">
 
     <FaultRules>
-        <FaultRule name="SpikeArrestViolation">
-            <Condition>(fault.name = "SpikeArrestViolation")</Condition>
-            <Step>
-                <Name>AssignMessage.SetSpikeArrestError</Name>
-            </Step>
-        </FaultRule>
     </FaultRules>
 
     <DefaultFaultRule name="DefaultHandler">
@@ -22,11 +16,6 @@
     </DefaultFaultRule>
 
     <PreFlow name="PreFlow">
-        <Request>
-            <Step>
-                <Name>SpikeArrest.Global</Name>
-            </Step>
-        </Request>
     </PreFlow>
 
     <Flows>
