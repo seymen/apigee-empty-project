@@ -102,7 +102,6 @@
 								<resource>
 									<!--source -->
 									<directory>${project.root.dir}</directory>
-									<filtering>true</filtering>
 									<includes>
 										<include>apiproxy/**</include>
 										<include>test/integration/**</include>
