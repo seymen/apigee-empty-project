@@ -39,7 +39,7 @@
     </PostFlow>
 
     <HTTPProxyConnection>
-        <BasePath>/empty/${deployment.suffix}v1</BasePath>
+        <BasePath>/empty%deployment.suffix%/v1</BasePath>
         <VirtualHost>secure</VirtualHost>
     </HTTPProxyConnection>
 

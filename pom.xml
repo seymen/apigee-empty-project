@@ -5,7 +5,7 @@
 	<groupId>apigee</groupId>
 	<artifactId>empty</artifactId>
 	<version>-</version>
-	<name>empty-${deployment.suffix}v1</name>
+	<name>empty${deployment.suffix}v1</name>
 	<packaging>pom</packaging>
 
 	<pluginRepositories>
@@ -29,7 +29,7 @@
 		<org.slf4j.simpleLogger.defaultLogLevel>info</org.slf4j.simpleLogger.defaultLogLevel>
 		<project.root.dir>${basedir}</project.root.dir>
 		<target.root.dir>${basedir}/target</target.root.dir>
-		<deployment.suffix>${user.name}</deployment.suffix>
+		<deployment.suffix>-${user.name}</deployment.suffix>
 		<commit></commit>
 		<branch>a local</branch>
         <proxy.description>commit ${commit} from ${branch} branch by ${user.name}</proxy.description>
@@ -100,7 +100,6 @@
 							<overwrite>true</overwrite>
 							<resources>
 								<resource>
-									<!--source -->
 									<directory>${project.root.dir}</directory>
 									<includes>
 										<include>apiproxy/**</include>
@@ -108,11 +107,42 @@
 									</includes>
 								</resource>
 							</resources>
-							<!--target -->
 							<outputDirectory>${target.root.dir}</outputDirectory>
 						</configuration>
 					</execution>
 				</executions>
+			</plugin>
+
+            <plugin>
+				<groupId>com.google.code.maven-replacer-plugin</groupId>
+				<artifactId>replacer</artifactId>
+				<version>1.5.3</version>
+				<executions>
+					<execution>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+                    <regex>false</regex>
+					<basedir>${target.root.dir}</basedir>
+					<includes>
+                        <include>test/integration/config.json</include>
+                        <include>apiproxy/proxies/default.xml</include>
+					</includes>
+					<replacements>
+						<replacement>
+							<token>%api.northbound.domain%</token>
+                            <value>${api.northbound.domain}</value>
+						</replacement>
+						<replacement>
+                            <token>%deployment.suffix%</token>
+                            <value>${deployment.suffix}</value>
+						</replacement>
+					</replacements>
+				</configuration>
 			</plugin>
 
 			<plugin>
